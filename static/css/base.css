@@ -1,10 +1,11 @@
 
 body {
-    font-family: 'Montserrat Alternates', sans-serif;
-    background: url('') no-repeat center center fixed;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px; 
+    background: url('/media/cover7.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: whitesmoke;
+    color: black;
 }
 
 h1 {
@@ -13,12 +14,14 @@ h1 {
     font-family: 'Amatic SC', cursive;
 }
 
+/* Main navbar */
+
 #navlinks a {
     color: whitesmoke !important;
 }
 
 #main_title {
-    background-color: rgba(53, 21, 0, 0.781);
+    background-color: rgba(53, 21, 0, 0.856);
     color: whitesmoke;
 }
 
@@ -34,4 +37,27 @@ h1 {
 #bag {
     color: whitesmoke;
     font-size: 15px;
+}
+
+/* Homepage Feature */
+
+#home-feature-container {
+    height: 800px;
+    max-width: 1400px !important;
+    vertical-align: middle;
+    background-color: rgba(184, 142, 114, 0.623) !important;
+    border-radius: 10px;
+}
+
+#feature-title {
+    font-size: 50px;
+}
+
+/* Images */
+
+#feature1,
+#feature2,
+#feature3 {
+    border: 2px solid rgb(56, 18, 0);
+    border-radius: 50%;
 }
