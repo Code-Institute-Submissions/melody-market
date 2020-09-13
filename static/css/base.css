@@ -1,10 +1,13 @@
+html {
+    height: 100%;
+}
 
 body {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 30px; 
+    font-family: 'Spartan', sans-serif;
+    font-size: 20px; 
+    letter-spacing: 3px;
     background: url('/media/cover7.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
     color: black;
 }
 
@@ -14,9 +17,20 @@ h1 {
     font-family: 'Amatic SC', cursive;
 }
 
-/* Main navbar */
+a:hover {
+    text-decoration: none;
+}
+
+/* ------------ Main navbar ------------*/
 
 #navlinks a {
+    color: rgb(27, 27, 27) !important;
+    font-weight: bold;
+    padding: 25px;
+}
+
+#navlinks a:hover {
+    background-color: rgba(53, 21, 0, 0.856);
     color: whitesmoke !important;
 }
 
@@ -39,25 +53,117 @@ h1 {
     font-size: 15px;
 }
 
-/* Homepage Feature */
+/* ----------- Homepage Feature ----------- */
 
 #home-feature-container {
-    height: 800px;
+    height: 100%;
     max-width: 1400px !important;
     vertical-align: middle;
-    background-color: rgba(184, 142, 114, 0.623) !important;
-    border-radius: 10px;
+    background-color: rgba(151, 108, 79, 0.514) !important;
 }
 
 #feature-title {
-    font-size: 50px;
+    font-size: 30px;
 }
 
-/* Images */
+#home-slogan {
+    font-size: 30px;
+    color:rgb(255, 254, 245);
+    background-color: rgba(88, 53, 24, 0.712);
+    padding: 5px 15px;
+    border: 2px solid black;
+}
+
+/*
+#blue {
+ color: rgb(117, 1, 212);
+}
+
+#green {
+    color:rgb(37, 255, 84);
+}
+
+#purple {
+    color: rgb(214, 0, 0);
+}
+*/
+/* ------ Footer ------- */
+
+#footer {
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+/* ---------- Images ------------- */
 
 #feature1,
 #feature2,
 #feature3 {
     border: 2px solid rgb(56, 18, 0);
     border-radius: 50%;
+}
+
+/* ------------ Media Queries ----------- */
+
+/* --- Mobile screens --- */
+
+/* small mobile */
+@media (max-width: 375px){
+
+body {
+    font-size: 12px;
+}
+
+#feature-title {
+    font-size: 20px;
+}
+
+#feature1 {
+    height: 180px;
+    width: 180px;
+}
+
+#feature2,
+#feature3 {
+    display: none;
+}
+
+.none-visible {
+    display: none;
+}
+
+}
+
+/* mid to large mobile */
+
+@media (min-width: 375px) and (max-width: 991px){
+
+body {
+    font-size: 12px;
+}
+
+#feature-title {
+    font-size: 20px;
+}
+
+#feature2,
+#feature3 {
+    display: none;
+}
+
+.none-visible {
+    display: none;
+}
+
+}
+
+/* --- Large screens --- */
+
+@media (min-width: 992px){
+
+
+.container {
+    max-width: 80%;
+}
+
 }

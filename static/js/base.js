@@ -1,9 +1,3 @@
-Array.prototype.shuffle = function() {
-        var s = [];
-        while (this.length) s.push(this.splice(Math.random() * this.length, 1));
-        while (s.length) this.push(s.pop());
-        return this;}
-
 var picPaths = [
                 'media/elguitar1.jpg',
                 'media/acguitar1.jpg',
@@ -15,6 +9,14 @@ var picPaths = [
                 'media/marimba.jpg',
                 ];
 
+function selectedPicks() {
+
+Array.prototype.shuffle = function() {
+        var s = [];
+        while (this.length) s.push(this.splice(Math.random() * this.length, 1));
+        while (s.length) this.push(s.pop());
+        return this;}
+
 picPaths.shuffle();
 
 picO = new Array();
@@ -24,6 +26,8 @@ for(i=0; i < picPaths.length; i++){
     picO[i].src = picPaths[i];
     }
 
+
+
 window.onload=function(){
                 
 var mainImgs = document.getElementById('home-feature-container').getElementsByTagName('img');
@@ -31,7 +35,9 @@ var mainImgs = document.getElementById('home-feature-container').getElementsByTa
         mainImgs[i].src = picO[i].src;
         }
     }
+}
 
+selectedPicks();
 
 /*                
 var features = new Array('media/acguitar1.jpg','media/acguitar6.jpg','media/elguitar1.jpg','media/keyboard.jpg','media/piano6.jpg')
