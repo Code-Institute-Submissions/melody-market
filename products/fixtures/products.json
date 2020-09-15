@@ -26,5 +26,198 @@
          "image_url":"",
          "image":"piano6.jpg"
       }
+   },
+   {
+      "pk":3,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppelg0005",
+         "name":"Les Paul Red Burst",
+         "description":"Iconic Les Paul model with instantly recognisable sound which will bring back the spirit of rock n roll",
+         "price":4200.00,
+         "category":1,
+         "rating":5.0,
+         "image_url":"",
+         "image":"elguitar5.jpg"
+      }
+   },
+   {
+      "pk":4,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppelg0002",
+         "name":"Red Wine Stratocaster",
+         "description":"Electric guitar that will give you that classy look while it takes no compromise when delivering the versatile sound",
+         "price":2850.00,
+         "category":1,
+         "rating":4.6,
+         "image_url":"",
+         "image":"elguitar2.jpg"
+      }
+   },
+   {
+      "pk":5,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppelg0003",
+         "name":"New Blues Stratocaster",
+         "description":"This Strat was made to sound, feel and play just right when you pick it up and simply plug it into an tube amp",
+         "price":3700.00,
+         "category":1,
+         "rating":5.0,
+         "image_url":"",
+         "image":"elguitar3.jpg"
+      }
+   },
+   {
+      "pk":6,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppelg0004",
+         "name":"Black Maple Neck Stratocaster",
+         "description":"Black beauty that will give you that edgy sound and smoothnes in playing",
+         "price":2680.00,
+         "category":1,
+         "rating":4.7,
+         "image_url":"",
+         "image":"elguitar4.jpg"
+      }
+   },
+   {
+      "pk":7,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppelg0006",
+         "name":"Les Paul Gold",
+         "description":"Classic Les Paul model for any guitarist in search of that old vintage taste of a dirty guitar sound",
+         "price":3900.00,
+         "category":1,
+         "rating":4.8,
+         "image_url":"",
+         "image":"elguitar6.jpg"
+      }
+   },
+   {
+      "pk":8,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppelg0007",
+         "name":"Flying V",
+         "description":"What we would class as one of the first modern body electric guitars. The Flying V still has heads turning to this day over half a century since its release",
+         "price":1570.00,
+         "category":1,
+         "rating":4.2,
+         "image_url":"",
+         "image":"elguitar7.jpg"
+      }
+   },
+   {
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppelg0008",
+         "name":"Extreme Metal Axe",
+         "description":"If you want to sound metal and look metal, then search no more as this axe is your weapon of choice",
+         "price":3700.00,
+         "category":1,
+         "image_url":"",
+         "image":"elguitar8.jpg"
+      }
+   },
+   {
+      "pk":10,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppelg0009",
+         "name":"Thrash Metal Buddy",
+         "description":"When it comes to thrash metal there's no guitar you can rely on more. Plus, the badass look is what you get with this guitar.",
+         "price":930.00,
+         "category":1,
+         "image_url":"",
+         "image":"elguitar9.jpg"
+      }
+   },
+   {
+      "pk":11,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppacg0001",
+         "name":"Perfomer Standard",
+         "description":"You can take this acoustic guitar on the road with you and it will never let you down.",
+         "price":1385.00,
+         "category":1,
+         "rating":4.5,
+         "image_url":"",
+         "image":"acguitar1.jpg"
+      }
+   },
+   {
+      "pk":12,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppacg0002",
+         "name":"Starter Series",
+         "description":"You can choose from 3 different models of the Starter Series acoustic guitars. Ideal for the beginners as well as the intermediate players",
+         "price":450.00,
+         "category":1,
+         "rating":4.1,
+         "image_url":"",
+         "image":"acguitar2.jpg"
+      }
+   },
+   {
+      "pk":13,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppacg0003",
+         "name":"Cutaway Acoustic Perfomer",
+         "description":"This beautiful acoustic guitar is ideal for studio sessions as well as the live gigs since it allows a player a brilliant performance every time",
+         "price":3500.00,
+         "category":1,
+         "rating":5.0,
+         "image_url":"",
+         "image":"acguitar3.jpg"
+      }
+   },
+   {
+      "pk":14,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppacg0004",
+         "name":"Studio Cutaway",
+         "description":"Ideal for the long studio sessions as it deliver the clear, bright sound that cuts throug the mix",
+         "price":1850.00,
+         "category":1,
+         "rating":4.7,
+         "image_url":"",
+         "image":"acguitar4.jpg"
+      }
+   },
+   {
+      "pk":15,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppacg0005",
+         "name":"Dreadnought Cutaway",
+         "description":"This guitar delivers a big sound even without amplification. Remeber those good ol' nights by the lake, around a campfire? We do. With nostalgia...",
+         "price":1600.00,
+         "category":1,
+         "image_url":"",
+         "image":"acguitar5.jpg"
+      }
+   },
+   {
+      "pk":16,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppacg0006",
+         "name":"12 String Lady",
+         "description":"Is there anythign better than a big, clear sound of six string? There is. A 12 string guitar that sings while you play it. This model will give you smooth performance which is perfect for every occasion.",
+         "price":2200.00,
+         "category":1,
+         "rating":5.0,
+         "image_url":"",
+         "image":"acguitar6.jpg"
+      }
    }
 ]

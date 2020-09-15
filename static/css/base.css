@@ -8,6 +8,7 @@ body {
     letter-spacing: 3px;
     background: url('/media/cover7.jpg') no-repeat center center fixed;
     background-size: cover;
+    height: calc(100vh - 175px);
     color: black;
 }
 
@@ -24,14 +25,20 @@ a:hover {
 /* ------------ Main navbar ------------*/
 
 #navlinks a {
-    color: rgb(27, 27, 27) !important;
+    background-color: rgba(58, 58, 58, 0.849);
+    color: rgb(231, 231, 231) !important;
     font-weight: bold;
-    padding: 25px;
+    padding: 10px 40px;
+    border-radius: 15px;
 }
 
 #navlinks a:hover {
     background-color: rgba(53, 21, 0, 0.856);
     color: whitesmoke !important;
+}
+
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0) !important;
 }
 
 #main_title {
@@ -66,6 +73,7 @@ a:hover {
     font-size: 30px;
 }
 
+/*
 #home-slogan {
     font-size: 30px;
     color:rgb(255, 254, 245);
@@ -73,7 +81,7 @@ a:hover {
     padding: 5px 15px;
     border: 2px solid black;
 }
-
+*/
 /* ------ Footer ------- */
 
 #footer {
@@ -152,5 +160,9 @@ body {
 .container {
     max-width: 80%;
 }
+
+ .header-container {
+        padding-top: 185px;
+    }
 
 }

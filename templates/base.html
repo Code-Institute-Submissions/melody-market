@@ -46,10 +46,8 @@
                     </div>
                 </form>
             </div>
-            <div class="col-md-4">
-                <a href="{% url 'home' %}">
-                <h1 class="text-white">Melody Market</h1>
-                </a>
+            <div class="col-md-4">    
+                <h1><a class="text-white" href="{% url 'home' %}">Melody Market</a></h1>
             </div>
             <div class="col-md-4">
 				<ul class="list-inline list-unstyled text-center text-lg-right my-0">
@@ -92,10 +90,6 @@
 				</ul>
             </div>
         </div>
-
-    </header>
-    <div class="row mb-5 none-visible"><div class="col"></div></div>
-    <div class="row pt-3 pb-5 none-visible"><div class="col"></div></div>
      <div class="row">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,7 +99,7 @@
          {% include 'includes/main-nav.html' %}
         </nav>
     </div>
-		
+	</header>
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
