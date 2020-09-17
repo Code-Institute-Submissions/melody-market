@@ -26,15 +26,15 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 pl-5 text-left">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <h2 class="mb-1"><strong>{{ product.name }}</strong></h2>
+                    <h2 class="mb-1 item_name"><strong>{{ product.name }}</strong></h2>
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
-                    <p class="mt-5 description-back">{{ product.description }}</p>
+                    <p class="mt-5 ">{{ product.description2|safe }}</p>
                     <br>
                     <p class="lead mb-0 font-weight-bold">€{{ product.price }}</p>
                 </div>

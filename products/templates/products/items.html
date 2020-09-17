@@ -12,11 +12,12 @@
 {% block content %}
 <div class="container-fluid">
         <div class="row">
-            <div class="product-container header-container col-10 offset-1">
+            <div class="product-container header-container col-6 offset-3">
                 <div class="row mt-2 mb-2"></div>
                 <div class="row">
                     {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="row fluid">
+                        <div class="col-4">
                             <div class="card h-100 border-3">
                                 {% if product.image %}
                                 <a href="{% url 'item_details' product.id %}">
@@ -28,43 +29,25 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0 border-1">
-                                    <p class="mb-0">{{ product.name }}</p>
+                                    
                                 </div>
                                 <div class="card-footer pt-0 border-1 text-center">
                                     <div class="row">
                                         <div class="col pt-2">
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating Yet</small>
-                                            {% endif %}
-                                            <p class="lead mb-0 pt-2 text-center font-weight-bold">€{{ product.price }}</p>
+                                            <p class=" mb-0 font-weight-bold">€{{ product.price }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Code taken from Code Institute's Django project lesson. Not edited -->
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
+                        <div class="col-8 align-self-center">
+                            <p class="pb-3 item_name"><strong><a href="{% url 'item_details' product.id %}">{{product.name }}</a></strong></p>
+                            <p class="mt-5 description-back">{{ product.description }}</p>
+                        </div>
+                   </div>
+                    <div class="row mt-2 mb-2 w-100">
+                        <div class="col offset-1" style="border-bottom: 1px dotted #434654"></div>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
