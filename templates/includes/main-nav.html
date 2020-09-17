@@ -11,13 +11,13 @@
                 Instruments
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="instruments">
-                <a class="dropdown-item">Guitars</a>
-                <a class="dropdown-item">Basses</a>
-                <a class="dropdown-item">Strings</a>
-				<a class="dropdown-item">Woodwind</a>
-				<a class="dropdown-item">Keyboard</a>
-				<a class="dropdown-item">Brass</a>
-				<a class="dropdown-item">Percussion</a>
+                <a href="{% url 'items' %}?category=guitars" class="dropdown-item">Guitars</a>
+                <a href="{% url 'items' %}?category=basses" class="dropdown-item">Basses</a>
+                <a href="{% url 'items' %}?category=strings" class="dropdown-item">Strings</a>
+				<a href="{% url 'items' %}?category=woodwind" class="dropdown-item">Woodwind</a>
+				<a href="{% url 'items' %}?category=keyboard" class="dropdown-item">Keyboard</a>
+				<a href="{% url 'items' %}?category=brass" class="dropdown-item">Brass</a>
+				<a href="{% url 'items' %}?category=percussion" class="dropdown-item">Percussion</a>
             </div>
         </li>
 
@@ -26,9 +26,9 @@
                 Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="accessories">
-                <a class="dropdown-item">Microphones</a>
-				<a class="dropdown-item">Cables</a>
-                <a class="dropdown-item">Guitar pics</a>
+                <a href="{% url 'items' %}?category=microphones" class="dropdown-item">Microphones</a>
+				<a href="{% url 'items' %}?category=cables" class="dropdown-item">Cables</a>
+                <a href="{% url 'items' %}?category=guitar_strings_pics" class="dropdown-item">Guitar Strings & Pics</a>
             </div>
         </li>
         <li class="nav-item">
@@ -36,6 +36,10 @@
                 Discounts
             </a>
         </li>
-
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link" href="{% url 'items' %}">
+                All Items
+            </a>
+        </li>
     </ul>
 </div>

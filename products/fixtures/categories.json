@@ -27,8 +27,8 @@
       "pk":4,
       "model":"products.category",
       "fields":{
-         "name":"woodwings",
-         "friendly_name":"Woodwings"
+         "name":"woodwind",
+         "friendly_name":"Woodwind"
       }
    },
    {
@@ -51,8 +51,8 @@
       "pk":7,
       "model":"products.category",
       "fields":{
-         "name":"percussions",
-         "friendly_name":"Percussions"
+         "name":"percussion",
+         "friendly_name":"Percussion"
       }
    },
    {
@@ -75,12 +75,20 @@
       "pk":10,
       "model":"products.category",
       "fields":{
-         "name":"guitar_pics",
-         "friendly_name":"Guitar Pics"
+         "name":"guitar_strings_pics",
+         "friendly_name":"Guitar Strings and Pics"
       }
    },
    {
       "pk":11,
+      "model":"products.category",
+      "fields":{
+         "name":"free_reeds",
+         "friendly_name":"Free-reed"
+      }
+   },
+   {
+      "pk":12,
       "model":"products.category",
       "fields":{
          "name":"discounts",

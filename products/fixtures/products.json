@@ -212,12 +212,547 @@
       "fields":{
          "sku":"ppacg0006",
          "name":"12 String Lady",
-         "description":"Is there anythign better than a big, clear sound of six string? There is. A 12 string guitar that sings while you play it. This model will give you smooth performance which is perfect for every occasion.",
+         "description":"Is there anythign better than a big, clear sound of six string? There is. A 12 string guitar that sings while you play it. This model will allow you smooth performance, perfect for every occasion.",
          "price":2200.00,
          "category":1,
          "rating":5.0,
          "image_url":"",
          "image":"acguitar6.jpg"
+      }
+   },
+   {
+      "pk":17,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppbg0001",
+         "name":"Jazz Master Bass",
+         "description":"This was the first mass produced and widely adopted electric bass guitar. With it thick low end and pin point precision these are still incredibly popular, even to this day. Find out why!",
+         "price":1200.00,
+         "category":2,
+         "rating":4.35,
+         "image_url":"",
+         "image":"bassguitar1.jpg"
+      }
+   },
+   {
+      "pk":18,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppbg0002",
+         "name":"60's Groove Bass",
+         "description":"These bass guitars play and sound like nothing else on the market. Sure, there are copies knocking around but they’re nothing like the real thing. Make sure you get one for yourself today!",
+         "price":2340.00,
+         "category":2,
+         "rating":4.75,
+         "image_url":"",
+         "image":"bassguitar2.jpg"
+      }
+   },
+   {
+      "pk":19,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppbsoo0001",
+         "name":"Bassoon",
+         "description":"The bassoon is a woodwind instrument in the double reed family that plays music written in the bass and tenor clefs, and occasionally the treble. This piece is ideal for beginners and intermediate players",
+         "price":2100.00,
+         "category":4,
+         "image_url":"",
+         "image":"basson.jpg"
+      }
+   },
+   {
+      "pk":20,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppbng0001",
+         "name":"Bongos",
+         "description":"Bongos are an Afro-Cuban percussion instrument consisting of a pair of small open bottomed drums of different sizes. In Spanish the larger drum is called the hembra and the smaller the macho. Are you macho enough to try these fellas out",
+         "price":74.00,
+         "category":7,
+         "rating":4.22,
+         "image_url":"",
+         "image":"bongos.jpg"
+      }
+   },
+   {
+      "pk":21,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppcbl0001",
+         "name":"Guitar Cable",
+         "description":"Whether for studio or a live performance this guitar cable will not let you down. We've got a wide selection of lengths and patches.",
+         "price":55.00,
+         "category":9,
+         "rating":5.0,
+         "image_url":"",
+         "image":"cable.jpg"
+      }
+   },
+   {
+      "pk":22,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppcell0001",
+         "name":"Cello",
+         "description":"The cello or violoncello is a bowed string instrument of the violin family. Its four strings are usually tuned in perfect fifths: from low to high, C₂, G₂, D₃ and A₃. With our cello your ears will be tuned in perfect harmony.",
+         "price":1900.00,
+         "category":3,
+         "rating":4.9,
+         "image_url":"",
+         "image":"cello.jpg"
+      }
+   },
+   {
+      "pk":23,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppcla0001",
+         "name":"Clarinet",
+         "description":"The clarinet is a family of woodwind instruments. It has a single-reed mouthpiece, a straight, cylindrical tube with an almost cylindrical bore, and a flared bell. A person who plays a clarinet is called a clarinetist. Make yourself a one and order from our shop today!",
+         "price":530.00,
+         "category":4,
+         "rating":4.8,
+         "image_url":"",
+         "image":"clarinet.jpg"
+      }
+   },
+   {
+      "pk":24,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppcon0001",
+         "name":"Conga",
+         "description":"The conga, also known as tumbadora, is a tall, narrow, single-headed drum from Cuba. It's not a cigar but hey, it's a healthy version of fun.",
+         "price":380.00,
+         "category":7,
+         "image_url":"",
+         "image":"conga.jpg"
+      }
+   },
+   {
+      "pk":25,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppdblb0001",
+         "name":"Double Bass",
+         "description":"The double bass, also known simply as the bass (or by other names), is the largest and lowest-pitched bowed (or plucked) string instrument in the modern symphony orchestra. Definitely a largest pal in our shop.",
+         "price":1150.00,
+         "category":3,
+         "image_url":"",
+         "image":"dblbass.jpg"
+      }
+   },
+   {
+      "pk":26,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppdjem0001",
+         "name":"Djembe",
+         "description":"According to the Bambara people in Mali, the name of the djembe comes from the saying Anke djé, anke bé which translates to everyone gather together in peace and defines the drum's purpose. Enough said.",
+         "price":150.00,
+         "category":7,
+         "image_url":"",
+         "image":"djembe.jpg"
+      }
+   },
+   {
+      "pk":27,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppdrum0001",
+         "name":"Drum Set",
+         "description":"Are you ready to shake the hall with this loud beast? Crashes, Hi Hats, Snare, Toms and bass drum all included to make the rumble that's not humble.",
+         "price":2200.00,
+         "category":7,
+         "rating":5.0,
+         "image_url":"",
+         "image":"drums.jpg"
+      }
+   },
+   {
+      "pk":28,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppeflug0001",
+         "name":"Flugelhorn",
+         "description":"It resembles a trumpet, but it's not. Nickel silver outer slides, Third valve slide trigger, 3 Water keys, Lacquer finish. Just about everything you need from a Flugelhorn.",
+         "price":250.00,
+         "category":6,
+         "image_url":"",
+         "image":"flugelhorn.jpg"
+      }
+   },
+   {
+      "pk":29,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppflut0001",
+         "name":"Flute",
+         "description":"Unlike other woodwind instruments with reeds, a flute is an aerophone or reedless wind instrument that produces its sound from the flow of air across an opening. Nicest sounding air flow we have ever heard. Just try it for yourself if you don't believe us.",
+         "price":255.00,
+         "category":4,
+         "rating":5.0,
+         "image_url":"",
+         "image":"flute.jpg"
+      }
+   },
+   {
+      "pk":30,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppfre0001",
+         "name":"French Horn",
+         "description":"A musician who plays a horn is known as a horn player or hornist. This instrument is intended for a student. So in this case player would be called a student hornist? No? Ok...",
+         "price":250.00,
+         "category":6,
+         "image_url":"",
+         "image":"french horn.jpg"
+      }
+   },
+   {
+      "pk":31,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppgpic0001",
+         "name":"Guitar Pics",
+         "description":"For an acoustic or an electric guitar, you name it we got it.",
+         "price":1.50,
+         "category":10,
+         "image_url":"",
+         "image":"gpick.jpg"
+      }
+   },
+   {
+      "pk":32,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppacstr0001",
+         "name":"Acoustic Guitar Strings",
+         "description":"Clarity, brilliance and other superlative atributes describe these strings, alongside with durability. They come in all sizes.",
+         "price":15.00,
+         "category":10,
+         "rating":5.0,
+         "image_url":"",
+         "image":"gstrings.jpg"
+      }
+   },
+   {
+      "pk":33,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppelstr0001",
+         "name":"Electric Guitar Strings",
+         "description":"If you need new strings for your axe to make it cry or sing then these babies is all you need. They come in all sizes.",
+         "price":15.00,
+         "category":10,
+         "rating":5.0,
+         "image_url":"",
+         "image":"elgstrings.jpg"
+      }
+   },
+   {
+      "pk":34,
+      "model":"products.product",
+      "fields":{
+         "sku":"pphar0001",
+         "name":"Harmonica",
+         "description":"Ready for some good ol' blues? Available in different keys",
+         "price":2200.00,
+         "category":11,
+         "rating":4.9,
+         "image_url":"",
+         "image":"harmonica.jpg"
+      }
+   },
+   {
+      "pk":35,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppacg0006",
+         "name":"Harp",
+         "description":"It can be found on the Coat of arms of Ireland, but it also can be found in your hands in your homeland. If you order this lovely instrument today, it can be yours to make it play all day.",
+         "price":2800.00,
+         "category":3,
+         "rating":5.0,
+         "image_url":"",
+         "image":"harp.jpg"
+      }
+   },
+   {
+      "pk":36,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppmkey0001",
+         "name":"Midi Keyboard",
+         "description":"Perfect tool for electronic music production and studio use",
+         "price":920.00,
+         "category":5,
+         "rating":4.75,
+         "image_url":"",
+         "image":"keyboard.jpg"
+      }
+   },
+   {
+      "pk":37,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppmar0001",
+         "name":"Maracas",
+         "description":"Shake this rattle instrument and get ready for fiesta!",
+         "price":22.00,
+         "category":7,
+         "image_url":"",
+         "image":"maracas.jpg"
+      }
+   },
+   {
+      "pk":38,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppmrmb0001",
+         "name":"Marimba",
+         "description":"Want a getaway to the Caribbean? Well you can make it in your room with cheerful and percussive sound this instrument provides. It comes with a pair of rubber mallets too.",
+         "price":2150.00,
+         "category":7,
+         "rating":4.6,
+         "image_url":"",
+         "image":"marimba.jpg"
+      }
+   },
+   {
+      "pk":39,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppmcab0001",
+         "name":"Microphone Cable",
+         "description":"This microphone cable was made to last. Use it in a studio or live on stage and it won't fail you.",
+         "price":35.00,
+         "category":9,
+         "rating":5.0,
+         "image_url":"",
+         "image":"mcable.jpg"
+      }
+   },
+   {
+      "pk":40,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppmic0001",
+         "name":"Microphone Standard",
+         "description":"All arounder, sturdy piece of equipment that will serve you both in studio and on the road.",
+         "price":80.00,
+         "category":8,
+         "rating":4.6,
+         "image_url":"",
+         "image":"microphone.jpg"
+      }
+   },
+   {
+      "pk":41,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppmic0002",
+         "name":"Microphone PRO",
+         "description":"A microphone ideal for studio use to make to most out of your voice and to get that recording that sits just right in a mix.",
+         "price":250.00,
+         "category":8,
+         "rating":4.9,
+         "image_url":"",
+         "image":"microphone2.jpg"
+      }
+   },
+   {
+      "pk":42,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppobo0001",
+         "name":"Oboe",
+         "description":"Oboes are usually made of wood, but may also be made of synthetic materials, such as plastic, resin or hybrid composites. Ours is made out of sustainable wood. It will never pollute your ears.",
+         "price":1230.00,
+         "category":4,
+         "image_url":"",
+         "image":"oboe.jpg"
+      }
+   },
+   {
+      "pk":43,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppkey0002",
+         "name":"Upright Piano",
+         "description":"Ideal for home practice or a classroom. Bright and full sound",
+         "price":3200.00,
+         "category":5,
+         "rating":4.2,
+         "image_url":"",
+         "image":"piano1.jpg"
+      }
+   },
+   {
+      "pk":44,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppkey0003",
+         "name":"Grand Piano",
+         "description":"Her Majesty - a grand concert piano. This exlusive instrument can be found in many concert halls around the world and to play it is to feel the classical music in its full glory.",
+         "price":5200.00,
+         "category":5,
+         "rating":5.0,
+         "image_url":"",
+         "image":"piano2.jpg"
+      }
+   },
+   {
+      "pk":45,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppkey0004",
+         "name":"Digital Piano",
+         "description":"A perfect working horse for your practise and performing needs. It can come very useful in a studio too.",
+         "price":1670.00,
+         "category":5,
+         "rating":4.8,
+         "image_url":"",
+         "image":"piano3.jpg"
+      }
+   },
+   {
+      "pk":46,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppkey0005",
+         "name":"Portable Digital Piano",
+         "description":"Looking for a piano which you can pretty much carry it around like a guitar? Then this is your choice as it has all the sound you need plus more.",
+         "price":624.00,
+         "category":5,
+         "rating":4.67,
+         "image_url":"",
+         "image":"piano4.jpg"
+      }
+   },
+   {
+      "pk":47,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppkey0006",
+         "name":"Upright Piano - White",
+         "description":"Ideal for home practice or a classroom. Bright and full sound. White finish to really make it stand out.",
+         "price":3400.00,
+         "category":5,
+         "rating":5.0,
+         "image_url":"",
+         "image":"piano5.jpg"
+      }
+   },
+   {
+      "pk":48,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppsax0001",
+         "name":"Saxophone",
+         "description":"Now this bad boy can growl as well as can make those careless whispers",
+         "price":420.00,
+         "category":4,
+         "rating":4.84,
+         "image_url":"",
+         "image":"sax.jpg"
+      }
+   },
+   {
+      "pk":49,
+      "model":"products.product",
+      "fields":{
+         "sku":"pptrom0001",
+         "name":"Trombone",
+         "description":"The trombone is another member of the brass musical family. As with all brass instruments, sound is produced when the player's vibrating lips (embouchure) cause the air column inside the instrument to vibrate, just like your body will vibrate out of joy while playing it.",
+         "price":2050.00,
+         "category":6,
+         "rating":4.76,
+         "image_url":"",
+         "image":"trombone.jpg"
+      }
+   },
+   {
+      "pk":50,
+      "model":"products.product",
+      "fields":{
+         "sku":"pptrum0001",
+         "name":"Trumpet",
+         "description":"Trumpet can make you dance, cry and all that jazz. With our selection you will be able to express yourself in every musical way possible.",
+         "price":530.00,
+         "category":6,
+         "rating":4.8,
+         "image_url":"",
+         "image":"trumpet.jpg"
+      }
+   },
+   {
+      "pk":51,
+      "model":"products.product",
+      "fields":{
+         "sku":"pptub0001",
+         "name":"Tuba",
+         "description":"The tuba is the lowest-pitched musical instrument in the brass family. But we guarantee you our tuba won't make you feel low.",
+         "price":810.00,
+         "category":6,
+         "image_url":"",
+         "image":"tuba.jpg"
+      }
+   },
+   {
+      "pk":52,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppukul0001",
+         "name":"Ukulele",
+         "description":"No mather if you are on a beach or somewhere over the rainbow, the sound coming out of this small instrument won't left you indifferent.",
+         "price":70.00,
+         "category":3,
+         "rating":5.0,
+         "image_url":"",
+         "image":"ukulele.jpg"
+      }
+   },
+   {
+      "pk":53,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppvila0001",
+         "name":"Viola",
+         "description":"Violin's big sister, a vital part of any string ensamble. Make yourself vital by ordering our viola today.",
+         "price":982.00,
+         "category":3,
+         "rating":4.84,
+         "image_url":"",
+         "image":"viola.jpg"
+      }
+   },
+   {
+      "pk":54,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppvio0001",
+         "name":"Violin",
+         "description":"The smallest and highest-pitched instrument in the strings family. Without it there is no classical music. Without your order there is no bread on our table, even though the sound of our violin is simply delicious.",
+         "price":720.00,
+         "category":3,
+         "rating":5.0,
+         "image_url":"",
+         "image":"violin.jpg"
+      }
+   },
+   {
+      "pk":55,
+      "model":"products.product",
+      "fields":{
+         "sku":"ppxylo0001",
+         "name":"Xylophone",
+         "description":"Smaller than marimba but can make those tropical sounds just right. Ready for another sail through the Carribean?",
+         "price":1285.00,
+         "category":7,
+         "image_url":"",
+         "image":"xylophone.jpg"
       }
    }
 ]

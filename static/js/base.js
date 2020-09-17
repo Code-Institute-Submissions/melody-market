@@ -30,7 +30,7 @@ for(i=0; i < picPaths.length; i++){
 
 window.onload=function(){
                 
-var mainImgs = document.getElementById('home-feature-container').getElementsByTagName('img');
+var mainImgs = document.getElementById('feature-pics').getElementsByTagName('img');
     for(i=0; i < mainImgs.length; i++){
         mainImgs[i].src = picO[i].src;
         }
