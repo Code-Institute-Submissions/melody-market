@@ -18,10 +18,10 @@
                         <table class="table table-sm table-borderless">
                             <thead class="">
                                 <tr>
-                                    <th scope="col">Product Info</th>
+                                    <th scope="col">Item</th>
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
+                                    <th scope="col">Quantity</th>
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
@@ -29,7 +29,7 @@
                             {% for item in cart_items %}
                                 <tr>
                                     <td class="p-3">
-                                        <img class="img-fluid rounded" src="{{ item.item.image.url }}" width="100" height="100">
+                                        <img id="cart-img" class="img-fluid" src="{{ item.item.image.url }}" width="100" height="100">
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.item.name }}</strong></p>
@@ -39,7 +39,21 @@
                                         <p class="my-0">€{{ item.item.price }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">{{ item.quantity }}</p>
+                                        
+                                         <form class="form update-form" method="POST" action="{% url 'update_cart' item.item.id %}">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input class="form-control form-control-sm qty_input" type="number"
+                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                        data-item_id="{{ item.item_id }}"
+                                                        id="id_qty_{{ item.item_id }}">
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <a class="update-link text-info"><small>Update</small></a>
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">€{{ item.item.price }}</p>
@@ -48,23 +62,23 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5">
-                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                    <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+                                    <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                                    <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery_delta > 0 %}
                                         <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                            You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
                                         </p>
                                     {% endif %}
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="">
-                                    <a href="{% url 'items' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                    <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0 btn-lg">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
+                                        <span class="text-uppercase">Back to Home</span>
                                     </a>
                                     <a href="" class="btn btn-black rounded-0 btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
@@ -80,13 +94,35 @@
         {% else %}
             <p class="lead mb-5">Your shopping cart is empty...</p>
             <p>
-                <img src="/media/cart.png" height="350" width="400">
+                <img src="/media/cart.png" height="300" width="350">
             </p>
             
         {% endif %}
     </div>
 </div>
+{% endblock %}
 
+{% block postloadjs %}
+<script>
+// Update quantity on click
+$('.update-link').click(function(e) {
+    var form = $(this).prev('.update-form');
+    form.submit();
+})
+
+// Remove item and reload on click
+$('.remove-item').click(function(e) {
+    var csrfToken = "{{ csrf_token }}";
+    var itemId = $(this).attr('id').split('remove_')[1];
+    var url = `/cart/remove/${itemId}/`;
+    var data = {'csrfmiddlewaretoken': csrfToken};
+
+    $.post(url, data)
+        .done(function() {
+            location.reload();
+        });
+})
+</script>
 {% endblock %}
 
 {% block footer %}

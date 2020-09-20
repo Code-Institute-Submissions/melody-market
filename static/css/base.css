@@ -149,6 +149,30 @@ article a {
     font-size: 15px;
 }
 
+#add-to-cart-button {
+    width: 50%;
+}
+
+#addbutt {
+    background-color: rgb(19, 221, 19);
+    border-radius: 10px;
+}
+
+#addbutt:hover {
+    background-color: rgb(38, 138, 38);
+}
+
+#addbutt2 {
+    color: rgb(252, 252, 252);
+    font-weight: bold;
+    padding-top: 11px;
+}
+
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* ------ Scrollbar ----- */
 
 ::-webkit-scrollbar {
@@ -184,6 +208,11 @@ article a {
 #feature1,
 #feature2,
 #feature3 {
+    border: 2px solid rgb(56, 18, 0);
+    border-radius: 50%;
+}
+
+#cart-img {
     border: 2px solid rgb(56, 18, 0);
     border-radius: 50%;
 }

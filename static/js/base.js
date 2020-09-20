@@ -39,6 +39,9 @@ var mainImgs = document.getElementById('feature-pics').getElementsByTagName('img
 
 selectedPicks();
 
+
+
+
 /*                
 var features = new Array('media/acguitar1.jpg','media/acguitar6.jpg','media/elguitar1.jpg','media/keyboard.jpg','media/piano6.jpg')
 
