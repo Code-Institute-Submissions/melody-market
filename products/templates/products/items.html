@@ -19,6 +19,8 @@
             <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
+                        <!-- Code taken from Code Institute's lesson source code 
+                        https://github.com/ckz8780/boutique_ado_v1/blob/656166307e469630d09e0eb17a0d17daa440e208/products/templates/products/products.html-->
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
@@ -39,7 +41,7 @@
                 <div class="row">
                     {% for product in products %}
                     <div class="row fluid">
-                        <div class="col-4">
+                        <div id="item-img" class="col-12 col-md-4 col-lg-4">
                             <div class="card h-100 border-3">
                                 {% if product.image %}
                                 <a href="{% url 'item_details' product.id %}">
@@ -56,22 +58,27 @@
                                 <div class="card-footer pt-0 border-1 text-center">
                                     <div class="row">
                                         <div class="col pt-2">
-                                            <p class=" mb-0 font-weight-bold">€{{ product.price }}</p>
+                                            <p id="product_price" class="mb-0 font-weight-bold">€{{ product.price }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-8 align-self-center">
+                        <div id="item-dscr" class="col-8 align-self-center">
                             <p class="pb-3 item_name"><strong><a href="{% url 'item_details' product.id %}">{{product.name }}</a></strong></p>
-                             {% if product.rating == 5 %}
+                        <!-- Item rating system -->
+                            {% if product.rating == 5 %}
                                 <small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i></small>
-                            {% elif product.rating < 5 %}
+                            {% elif product.rating < 5 and product.rating > 4.5 %}
                                 <small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star-half"></i></small>
-                            {% elif product.rating < 4.5 %}
-                                <small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i></small>
+                            {% elif product.rating >= 4 %}
+                                <small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i></small>
+                            {% elif product.rating < 4 and product.rating > 3.5 %}
+                                <small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star-half"></i></small>
+                            {% elif product.rating >= 3 %}
+                                <small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i></small>
                             {% else %}
-                                <small class="text-muted">No Rating</small>
+                                <small class="text-muted">No Rating Yet</small>
                             {% endif %}
                             <p class="mt-5 description-back">{{ product.description }}</p>
                         </div>
