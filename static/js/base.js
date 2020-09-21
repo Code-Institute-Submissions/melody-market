@@ -1,12 +1,9 @@
 var picPaths = [
-                'media/elguitar1.jpg',
-                'media/acguitar1.jpg',
-                'media/flute.jpg',
-                'media/keyboard.jpg',
-                'media/sax.jpg',
-                'media/acguitar6.jpg',
-                'media/piano6.jpg',
-                'media/marimba.jpg',
+                'media/elguitsale1.jpg',
+                'media/elguitsale2.jpg',
+                'media/keysale1.jpg',
+                'media/keysale2.jpg',
+                'media/banjo.jpg',
                 ];
 
 function selectedPicks() {
@@ -38,32 +35,3 @@ var mainImgs = document.getElementById('feature-pics').getElementsByTagName('img
 }
 
 selectedPicks();
-
-
-
-
-/*                
-var features = new Array('media/acguitar1.jpg','media/acguitar6.jpg','media/elguitar1.jpg','media/keyboard.jpg','media/piano6.jpg')
-
-function choosePic1() {
-     var randomNum = Math.floor(Math.random() * features.length);
-     document.getElementById("feature1").src = features[randomNum];
-    }
-
-function choosePic2() {
-     var randomNum = Math.floor(Math.random() * features.length);
-     document.getElementById("feature2").src = features[randomNum];
-    }
-
-function choosePic3() {
-     var randomNum = Math.floor(Math.random() * features.length);
-     document.getElementById("feature3").src = features[randomNum];
-    }
-
-window.onload = function() {
-    var img1 = choosePic1() ;
-    var img2 = choosePic2() ;
-    var img3 = choosePic3() ;
-}
-
-*/

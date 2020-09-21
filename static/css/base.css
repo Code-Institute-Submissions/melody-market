@@ -205,16 +205,55 @@ article a {
 
 /* ---------- Images ------------- */
 
-#feature1,
-#feature2,
-#feature3 {
-    border: 2px solid rgb(56, 18, 0);
+#feature2 {
+    border: 2px solid rgba(56, 18, 0, 0.349);
     border-radius: 50%;
+    margin: 0 auto;
+    transition: transform .5s;
+    overflow: hidden;
+}
+
+#feature2:hover {
+    transform: scale(1.2);
 }
 
 #cart-img {
     border: 2px solid rgb(56, 18, 0);
     border-radius: 50%;
+}
+
+#img-list {
+    margin: 0 auto;
+    transition: transform .5s;
+}
+
+#img-list:hover {
+    transform: scale(1.15);
+}
+
+.img-hover-zoom {
+    overflow: hidden;
+}
+
+.img-hover-zoom img {
+    transition: transform .9s ease;
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.05);
+}
+
+.img-hover-zoom:hover #feature1,
+.img-hover-zoom:hover #feature3 {
+    transform: scale(1.15);
+}
+
+/* ------------ Messages ---------------*/
+.message-container {
+    position: fixed;
+    top: 80px;
+    right: 15px;
+    z-index: 99999999999;
 }
 
 /* ------------ Media Queries ----------- */

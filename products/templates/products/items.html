@@ -11,41 +11,42 @@
 
 {% block content %}
 <div class="container-fluid">
-        <div class="row">
-            <div class="product-container header-container col-6 offset-3">
-                <div class="row mt-2 mb-2"></div>
-                <div class="row">
-            <div class="product-container col-10 offset-1">
-            <div class="row mt-1 mb-2">
-                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                        <div class="sort-select-wrapper w-50">
-                        <!-- Code taken from Code Institute's lesson source code 
-                        https://github.com/ckz8780/boutique_ado_v1/blob/656166307e469630d09e0eb17a0d17daa440e208/products/templates/products/products.html-->
-                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 order-md-first">
-                        <p class="text-muted mt-3 text-center text-md-left">
-                            {{ products|length }} Items{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    {% for product in products %}
-                    <div class="row fluid">
-                        <div id="item-img" class="col-12 col-md-4 col-lg-4">
-                            <div class="card h-100 border-3">
+	<div class="row">
+		<div class="product-container header-container col-6 offset-3">
+			<div class="row mt-2 mb-2"></div>
+			<div class="row">
+				<div class="product-container col-10 offset-1">
+					<div class="row mt-1 mb-2">
+						<div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                            <!-- Code taken from Code Institute's lesson source code 
+                            https://github.com/ckz8780/boutique_ado_v1/blob/656166307e469630d09e0eb17a0d17daa440e208/products/templates/products/products.html-->
+                            <div class="sort-select-wrapper w-50">
+								<select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                </select>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 order-md-first">
+							<p class="text-muted mt-3 text-center text-md-left">
+								{{ products|length }} Items{% if search_term %} found for
+								<strong>"{{ search_term }}"</strong>{% endif %}
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						{% for product in products %}
+						<div class="row fluid">
+							<div id="item-img" class="col-12 col-md-4 col-lg-4">
+								<div class="card h-100 border-3">
                                 {% if product.image %}
                                 <a href="{% url 'item_details' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    <img id="img-list" class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'item_details' product.id %}">
@@ -53,44 +54,46 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0 border-1">
-                                    
                                 </div>
-                                <div class="card-footer pt-0 border-1 text-center">
-                                    <div class="row">
-                                        <div class="col pt-2">
-                                            <p id="product_price" class="mb-0 font-weight-bold">€{{ product.price }}</p>
+                                    <div class="card-footer pt-0 border-1 text-center">
+                                        <div class="row">
+                                            <div class="col pt-2">
+                                                <p id="product_price" class="mb-0 font-weight-bold">
+                                                €{{ product.price }}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="item-dscr" class="col-8 align-self-center">
-                            <p class="pb-3 item_name"><strong><a href="{% url 'item_details' product.id %}">{{product.name }}</a></strong></p>
-                        <!-- Item rating system -->
-                            {% if product.rating == 5 %}
-                                <small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i></small>
-                            {% elif product.rating < 5 and product.rating > 4.5 %}
-                                <small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star-half"></i></small>
-                            {% elif product.rating >= 4 %}
-                                <small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i></small>
-                            {% elif product.rating < 4 and product.rating > 3.5 %}
-                                <small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star-half"></i></small>
-                            {% elif product.rating >= 3 %}
-                                <small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i></small>
-                            {% else %}
-                                <small class="text-muted">No Rating Yet</small>
-                            {% endif %}
-                            <p class="mt-5 description-back">{{ product.description }}</p>
-                        </div>
-                   </div>
-                    <div class="row mt-2 mb-2 w-100">
-                        <div class="col offset-1" style="border-bottom: 1px dotted #434654"></div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-</div>
+								</div>
+							</div>
+							<div id="item-dscr" class="col-8 align-self-center">
+								<p class="pb-3 item_name">
+									<strong><a href="{% url 'item_details' product.id %}">{{product.name }}</a></strong>
+								</p>
+								<!-- Item rating system -->
+								{% if product.rating == 5 %}
+								<small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i></small>
+								{% elif product.rating < 5 and product.rating > 4.5 %}
+								<small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star-half"></i></small>
+								{% elif product.rating >= 4 %}
+								<small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i></small>
+								{% elif product.rating < 4 and product.rating > 3.5 %}
+								<small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star-half"></i></small>
+								{% elif product.rating >= 3 %}
+								<small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i></small>
+								{% else %}
+								<small class="text-muted">No Rating Yet</small>
+								{% endif %}
+								<p class="mt-5 description-back">{{ product.description }}</p>
+							</div>
+						</div>
+						<div class="row mt-2 mb-2 w-100">
+							<div class="col offset-1" style="border-bottom: 1px dotted #434654"></div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
 {% endblock %}
 
 <!-- Code taken from Code Institute's lesson source code 

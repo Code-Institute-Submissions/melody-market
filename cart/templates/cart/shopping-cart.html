@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load static %}
+{% extends "base.html" %} {% load static %} {% load cart_tools %}
 
 
 {% block page_header %}
@@ -56,7 +56,7 @@
 
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">€{{ item.item.price }}</p>
+                                        <p class="my-0">€{{ item.item.price | return_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -80,8 +80,8 @@
                                         </span>
                                         <span class="text-uppercase">Back to Home</span>
                                     </a>
-                                    <a href="" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
+                                    <a href="{% url 'payment' %}" class="btn btn-black rounded-0 btn-lg">
+                                        <span class="text-uppercase">Go To Secure Payments</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
                                         </span>
