@@ -1,1 +1,1 @@
-web: gunicorn melody_market:application
+web: gunicorn melody_market.wsgi:application

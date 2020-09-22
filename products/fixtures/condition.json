@@ -1,0 +1,16 @@
+[
+   {
+      "pk":1,
+      "model":"products.condition",
+      "fields":{
+         "condition":"New"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.condition",
+      "fields":{
+         "condition":"Used"
+      }
+   }
+]

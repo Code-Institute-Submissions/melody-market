@@ -15,8 +15,25 @@ class Category(models.Model):
         return self.friendly_name
 
 
+class Condition(models.Model):
+
+    condition = models.CharField(max_length=254)
+
+    def __str__(self):
+        return self.condition
+
+class Sale(models.Model):
+
+    sale = models.CharField(max_length=254)
+
+    def __str__(self):
+        return self.sale
+
+
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    condition = models.ForeignKey('Condition', null=True, blank=True, on_delete=models.SET_NULL)
+    sale = models.ForeignKey('Sale', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()

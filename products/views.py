@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, Condition, Sale
 
 # Create your views here.
 
@@ -55,6 +55,26 @@ def all_items(request):
     }
 
     return render(request, 'products/items.html', context)
+
+def item_condition(request, product_id):
+    """ A view to show if the item is used """
+
+    condition = Condition.objects.all()
+    context = {
+        'condition': condition,
+    }
+    
+    return context
+
+def item_sale(request, product_id):
+    """ A view to show if the item is on sale """
+
+    sale = Sale.objects.all()
+    context = {
+        'sale': sale,
+    }
+
+    return context
 
 def item_details(request, product_id):
     """ A view to return the item details """

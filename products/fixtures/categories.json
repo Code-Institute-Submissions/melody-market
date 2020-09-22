@@ -86,13 +86,5 @@
          "name":"free_reeds",
          "friendly_name":"Free-reed"
       }
-   },
-   {
-      "pk":12,
-      "model":"products.category",
-      "fields":{
-         "name":"discounts",
-         "friendly_name":"Discounts"
-      }
    }
 ]
