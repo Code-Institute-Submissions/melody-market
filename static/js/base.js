@@ -1,9 +1,9 @@
 var picPaths = [
-                'media/elguitsale1.jpg',
-                'media/elguitsale2.jpg',
-                'media/keysale1.jpg',
-                'media/keysale2.jpg',
-                'media/banjo.jpg',
+                '{{ MEDIA_URL }}elguitsale1.jpg',
+                '{{ MEDIA_URL }}elguitsale2.jpg',
+                '{{ MEDIA_URL }}keysale1.jpg',
+                '{{ MEDIA_URL }}keysale2.jpg',
+                '{{ MEDIA_URL }}banjo.jpg',
                 ];
 
 function selectedPicks() {
