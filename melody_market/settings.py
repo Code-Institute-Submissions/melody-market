@@ -118,17 +118,18 @@ WSGI_APPLICATION = 'melody_market.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-#if 'DATABASE_URL' in os.environ:
-DATABASES = {
-    'default': dj_database_url.parse('postgres://ajwtemudnuktjb:3caf16c1debab858cc834e3d6626ed89fe65b3291170b92afcb1f9d4144cb423@ec2-54-75-229-28.eu-west-1.compute.amazonaws.com:5432/da7os5g7viecd7')
-}
-#else: 
-#   DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#        }
-#    }
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -165,6 +166,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)

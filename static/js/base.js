@@ -1,9 +1,11 @@
+const AWS_S3_STATIC_URL = 'https://melody-market.s3-eu-west-1.amazonaws.com/'
+
 var picPaths = [
-                '{{ MEDIA_URL }}elguitsale1.jpg',
-                '{{ MEDIA_URL }}elguitsale2.jpg',
-                '{{ MEDIA_URL }}keysale1.jpg',
-                '{{ MEDIA_URL }}keysale2.jpg',
-                '{{ MEDIA_URL }}banjo.jpg',
+                'media/elguitsale1.jpg',
+                'media/elguitsale2.jpg',
+                'media/keysale1.jpg',
+                'media/keysale2.jpg',
+                'media/banjo.jpg',
                 ];
 
 function selectedPicks() {
@@ -20,7 +22,7 @@ picO = new Array();
 
 for(i=0; i < picPaths.length; i++){
     picO[i] = new Image();
-    picO[i].src = picPaths[i];
+    picO[i].src = AWS_S3_STATIC_URL + picPaths[i];
     }
 
 

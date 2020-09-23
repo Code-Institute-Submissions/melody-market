@@ -22,6 +22,15 @@ a:hover {
     text-decoration: none;
 }
 
+/* ------- Colors ------- */
+
+.green {
+    color: rgb(1, 105, 1) !important;
+}
+
+.red {
+    color: rgb(163, 1, 1) !important;
+}
 
 /* ------------ Main navbar ------------*/
 
@@ -60,6 +69,10 @@ a:hover {
 #cart {
     color: whitesmoke;
     font-size: 15px;
+}
+
+#nav-total {
+    color: rgb(252, 235, 162);
 }
 
 /* ----------- Homepage Feature ----------- */
@@ -154,7 +167,7 @@ article a {
 }
 
 #addbutt {
-    background-color: rgb(19, 221, 19);
+    background-color: rgb(22, 187, 22);
     border-radius: 10px;
 }
 
@@ -171,6 +184,22 @@ article a {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+#update-qty-input {
+    width: 70%;
+    padding-left: 30%;
+}
+
+/* ------- Shopping Cart -------- */
+
+#cart-btn-payments {
+    border: 1px solid rgb(56, 18, 0);
+}
+
+#cart-btn-payments:hover {
+    color: whitesmoke;
+    background-color: rgba(53, 21, 0, 0.856);
 }
 
 /* ------ Scrollbar ----- */

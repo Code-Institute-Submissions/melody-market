@@ -59,22 +59,25 @@ def all_items(request):
 def item_condition(request, product_id):
     """ A view to show if the item is used """
 
-    condition = Condition.objects.all()
-    context = {
-        'condition': condition,
-    }
+    condition = None
+
+    if 'condition' in request.GET:
+            categories = request.GET['category']
+            items = items.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
     
-    return context
+    return render(request, 'products/second_hand.html')
 
 def item_sale(request, product_id):
     """ A view to show if the item is on sale """
 
-    sale = Sale.objects.all()
-    context = {
-        'sale': sale,
-    }
+    if 'sale' in request.GET:
+            categories = request.GET['category']
+            items = items.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+    
+    return render(request, 'products/sale.html')
 
-    return context
 
 def item_details(request, product_id):
     """ A view to return the item details """

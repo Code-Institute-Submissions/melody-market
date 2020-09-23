@@ -4,7 +4,6 @@
   height: 40px;
   padding: 10px 12px;
   border: 1px solid rgba(59, 24, 0, 0.493);
-  border-radius: 0px;
   background-color: white;
   box-shadow: 0 1px 3px 0 #e6ebf1;
   -webkit-transition: box-shadow 150ms ease;
@@ -30,8 +29,26 @@
     right: .5rem;
 }
 
+fieldset {
+    border: 1px solid rgba(59, 24, 0, 0.493) !important;
+}
+
 #payment-form .form-control,
 #card-element {
     color: #000;
-    border: 1px solid #000 !important;
+    border-radius: 5px;
+}
+
+#checkout-img {
+    border: 1px solid rgba(59, 24, 0, 0.493);
+    border-radius: 50%;
+}
+
+#submit-button {
+    color: whitesmoke;
+    background-color: rgba(68, 25, 0, 0.753);
+}
+
+#submit-button:hover {
+    background-color: rgba(68, 26, 1, 0.973);
 }
