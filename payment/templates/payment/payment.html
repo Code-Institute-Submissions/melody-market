@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% load static %} {% load cart_tools %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static '/payment/css/payment.css' %}">
+    <link rel="stylesheet" href="{% static 'payment/css/payment.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -56,13 +56,14 @@
 
 			<div class="row mt-1">
 				<div class="col order-lg-last">
-					<p class="text-muted text-center mb-5">Order Summary: Total Number Of Items ({{ item_count }})</p>
-					<div class="row">
+					<p class="text-muted text-center mt-5">Order Summary:</p>
+                    <p class="text-muted text-center mb-3">Total Number Of Items ({{ item_count }})</p>
+					<div id="payment-summary-lable" class="row mb-3">
 						<div class="col-8">
-							<p class="mb-1 mt-0 small text-muted">Item</p>
+							<p class="mb-1 mt-1 small">Item</p>
 						</div>
 						<div class="col-3 text-center">
-							<p class="mb-1 mt-0 small text-muted">Subtotal</p>
+							<p class="mb-1 mt-1 small">Subtotal</p>
 						</div>
 					</div>
 					{% for item in cart_items %}

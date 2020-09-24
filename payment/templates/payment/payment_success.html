@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static '/payment/css/payment.css' %}">
+{% endblock %}
+
+{% block page_header %}
+	<div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+ <div class="row">
+    <div class="col">
+        <p>Thank you, your order is being processed! We will send you a confirmation email to {{ order.email }}</p>
+    </div>
+</div>
+
+<div class="row">
+   <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-black rounded-0 my-2">
+            <p class="text-uppercase">Back to Home page!</p>
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}
