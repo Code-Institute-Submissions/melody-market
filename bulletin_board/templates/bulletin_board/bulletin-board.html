@@ -1,0 +1,69 @@
+{% extends "base.html" %} {% load static %}
+
+
+{% block page_header %}
+	<div class="container empty-header">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class="row mt-5 pt-5">
+    <div class="col mt-5 pt-5">
+        Currently active messages: {{ count }}
+    </div>
+</div>
+<form method="POST" action="{% url 'addMessage' %}">
+			{% csrf_token %}
+	<button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">Add a message</button>
+</form>
+<div class="row">
+	{% for top in topic %}
+	<div class="col-6">
+		<div class="card box container">
+			<br>
+			<h5 class="card-title">
+
+				<h3>{{ top.title }}</h3>
+			</h5>
+			<div class="card-body container">
+				<hr>
+			{% for text in texts %}
+                {% for objs in text %}
+                 <p>
+                    {% if objs.Advert == Advert %}
+                        {{ objs.text }}
+                        {{ objs.phnumber }}
+                    {% endif %}
+                </p>
+                {% endfor %}
+            {% endfor %}
+          
+			</div>
+		</div>
+	</div>
+    {% endfor %}
+</div>
+
+{% else %}
+<div class="row mt-5 pt-5">
+	<div class="col mt-5 pt-5">
+    <h2>Bulletin Board</h2>
+    </div>
+</div>
+<div class="row mt-5">
+	<div class="col mt-5">
+		<label class="form-check-label" for="id-save-info">
+    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+    <a class="text-info" href="{% url 'account_login' %}">login</a> to access the Bulletin Board
+</label>
+	</div>
+</div>
+{% endif %}
+
+{% endblock %}

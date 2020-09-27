@@ -33,6 +33,16 @@ fieldset {
     border: 1px solid rgba(59, 24, 0, 0.493) !important;
 }
 
+select,
+select option {
+    color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #9c9b91 !important;
+}
+
 #payment-form .form-control,
 #card-element {
     color: #000;
@@ -56,4 +66,12 @@ fieldset {
 
 #submit-button:hover {
     background-color: rgba(68, 26, 1, 0.973);
+}
+
+.payment-details {
+    background-color: rgba(68, 25, 0, 0.555);
+}
+
+.payment-details small {
+    color: whitesmoke !important;
 }

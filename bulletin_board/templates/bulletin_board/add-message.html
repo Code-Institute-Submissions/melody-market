@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static '/bulletin_board/css/bb.css' %}">
+{% endblock %}
+
+{% block page_header %}
+	<div class="container empty-header">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="row mt-5 pt-5">
+    <div class="col mt-5 pt-5">
+        Add your ad!
+    </div>
+</div>
+<br>
+<div class="row">
+<div id="test" class="col"></div>
+<div class="col">
+<form action="{% url 'addMessage' %}" method="POST">
+    {% csrf_token %}
+    	{{ form.advert | as_crispy_field }}
+		{{ form.text | as_crispy_field }}
+        {{ form.phnumber | as_crispy_field }}
+    <input type="submit" class="btn btn-success" value="submit">
+</form>
+</div>
+<div class="col"></div>
+</div>
+{% endblock %}
+
+
+

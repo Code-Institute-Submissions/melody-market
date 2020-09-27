@@ -11,7 +11,8 @@
 
 {% block content %}
  <div class="row">
-    <div class="col">
+ <div class="col-2"></div>
+    <div class="col-8">
         {% if cart_items %}
            
                   <div class="table-responsive rounded">
@@ -25,24 +26,25 @@
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
-
+                            
                             {% for item in cart_items %}
                                 <tr>
-                                    <td class="p-3">
+                                    <td class="pb-3">
                                         <a href="{% url 'item_details' item.item.id %}">
                                             <img id="cart-img" class="img-fluid" src="{{ item.item.image.url }}" width="100" height="100">
                                         </a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.item.name }}</strong></p>
+                                        <p class="pt-2"><strong>{{ item.item.name }}</strong></p>
                                         <p class="my-0 small text-muted">SKU: {{ item.item.sku|upper }}</p>
+                                        <hr>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">€{{ item.item.price }}</p>
+                                        <p class="my-0 pt-2">€{{ item.item.price }}</p>
                                     </td>
                                     <td class="py-3">
                                         
-                                         <form class="form update-form" method="POST" action="{% url 'update_cart' item.item.id %}">
+                                         <form class="form update-form pt-2" method="POST" action="{% url 'update_cart' item.item.id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div id="update-qty-input" class="input-group">
@@ -58,7 +60,7 @@
 
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">€{{ item.item.price | return_subtotal:item.quantity }}</p>
+                                        <p class="my-0 pt-2">€{{ item.item.price | return_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -101,6 +103,7 @@
             
         {% endif %}
     </div>
+     <div class="col-2"></div>
 </div>
 {% endblock %}
 
