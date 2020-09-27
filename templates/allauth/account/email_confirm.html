@@ -7,7 +7,11 @@
 
 
 {% block content %}
-<h1>{% trans "Confirm E-mail Address" %}</h1>
+<div class="row mt-5 pt-5">
+    <div class="col d-none d-md-block mt-5 pt-5">
+    </div>
+</div>
+<h2 class="pb-4">{% trans "Confirm E-mail Address" %}</h2>
 
 {% if confirmation %}
 
@@ -15,7 +19,7 @@
 
 <p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user {{ user_display }}.{% endblocktrans %}</p>
 
-<form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+<form class="mt-5" method="post" action="{% url 'account_confirm_email' confirmation.key %}">
 {% csrf_token %}
     <button type="submit">{% trans 'Confirm' %}</button>
 </form>

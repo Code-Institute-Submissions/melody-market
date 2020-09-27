@@ -75,6 +75,23 @@ a:hover {
     color: rgb(252, 235, 162);
 }
 
+#dropdown-user {
+    background-color: rgba(58, 58, 58, 0.849) !important;
+}
+
+#dropdown-user a {
+    color: whitesmoke !important;
+}
+
+#dropdown-user a:hover {
+    color: rgb(56, 18, 0) !important;
+}
+
+#dropdown-user a:active {
+    color: whitesmoke !important;
+    background-color: rgba(53, 21, 0, 0.856) !important;
+}
+
 /* ----------- Homepage Feature ----------- */
 
 #home-feature-container {

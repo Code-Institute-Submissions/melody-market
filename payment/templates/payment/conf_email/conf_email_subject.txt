@@ -1,0 +1,1 @@
+Confirmation for your purchase on Melody Market - Order Number: {{ order.order_number }}
