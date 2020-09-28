@@ -9,7 +9,7 @@ class Advert(models.Model):
  
 class Text(models.Model):
     advert = models.ForeignKey('Advert',blank=True, null=True, on_delete=models.CASCADE)
-    date_created=models.DateTimeField(auto_now_add=True,null=False)
+    date_created = models.DateTimeField(auto_now_add=True,null=False)
     text = models.CharField(max_length=1000)
     phnumber = models.CharField(max_length=1000)
  

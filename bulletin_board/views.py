@@ -7,10 +7,8 @@ def show_ad(request):
     texts = []
     for i in topic:
         texts.append(i.text_set.all())
-    count = texts.count(i)
 
     context={'topic':topic,
-              'count':count,
               'texts':texts,
               }
     return render(request,'bulletin_board/bulletin-board.html',context)

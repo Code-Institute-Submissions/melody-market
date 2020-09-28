@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
@@ -10,6 +11,7 @@ from profiles.forms import UserProfileForm
 from cart.contexts import cart_content
 
 import stripe
+import json
 
 def payment(request):
 

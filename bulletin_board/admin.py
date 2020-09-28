@@ -1,12 +1,19 @@
 from django.contrib import admin
 from .models import *
  
-class TextAdmin(admin.ModelAdmin):
+
+class AdvertAdmin(admin.ModelAdmin):
     list_display = (
-        'date_created',
-        'advert',
-        'text',
+        'title',
+        'description',
     )
 
-admin.site.register(Advert)
-admin.site.register(Text)
+class TextAdmin(admin.ModelAdmin):
+    list_display = (
+        'text',
+        'date_created',
+        'advert',
+    )
+
+admin.site.register(Advert, AdvertAdmin)
+admin.site.register(Text, TextAdmin)

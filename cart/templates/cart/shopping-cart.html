@@ -11,8 +11,8 @@
 
 {% block content %}
  <div class="row">
- <div class="col-2"></div>
-    <div class="col-8">
+ <div class="col-2 d-none d-md-block"></div>
+    <div class="col-12 col-md-8 col-lg-8">
         {% if cart_items %}
            
                   <div class="table-responsive rounded">
@@ -30,8 +30,12 @@
                             {% for item in cart_items %}
                                 <tr>
                                     <td class="pb-3">
-                                        <a href="{% url 'item_details' item.item.id %}">
-                                            <img id="cart-img" class="img-fluid" src="{{ item.item.image.url }}" width="100" height="100">
+                                       {% if item.item.image %}
+                                         <a href="{% url 'item_details' item.item.id %}">
+                                        <img id="cart-img" class="img-fluid d-none d-md-block" src="{{ item.item.image.url }}" alt="{{ item.product.name }}" width="100" height="100">
+                                        {% else %}
+                                        <img class="img-fluid d-none d-md-block" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                        {% endif %}
                                         </a>
                                     </td>
                                     <td class="py-3">
@@ -103,7 +107,7 @@
             
         {% endif %}
     </div>
-     <div class="col-2"></div>
+     <div class="col-2 d-none d-md-block"></div>
 </div>
 {% endblock %}
 

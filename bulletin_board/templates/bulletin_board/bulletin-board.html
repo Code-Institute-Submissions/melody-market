@@ -15,7 +15,10 @@
 
 <div class="row mt-5 pt-5">
     <div class="col mt-5 pt-5">
-        Currently active messages: {{ count }}
+     <p><h2>Music Ads</h2></p>
+     <p>Are you selling or buying an instrument or a piece of equipment?</p> 
+     <p>Maybe you are looking for a fellow musician for that cool new band of yours?</p>
+     <p>Number of ads {{ texts | length }}</p>
     </div>
 </div>
 <form method="POST" action="{% url 'addMessage' %}">
@@ -28,22 +31,22 @@
 		<div class="card box container">
 			<br>
 			<h5 class="card-title">
-
 				<h3>{{ top.title }}</h3>
 			</h5>
 			<div class="card-body container">
-				<hr>
+			<hr>
 			{% for text in texts %}
                 {% for objs in text %}
                  <p>
                     {% if objs.Advert == Advert %}
+                        {{ objs.date_created }}
+                        <br>
                         {{ objs.text }}
                         {{ objs.phnumber }}
                     {% endif %}
                 </p>
                 {% endfor %}
             {% endfor %}
-          
 			</div>
 		</div>
 	</div>
