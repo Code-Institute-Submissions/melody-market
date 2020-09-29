@@ -34,15 +34,15 @@
 						</div>
 						<div class="col-12 col-md-6 order-md-first">
 							<p class="text-muted mt-3 text-center text-md-left">
-								{{ items|length }} Items{% if search_term %} found for
+								{{ items.sale|length }} Items{% if search_term %} found for
 								<strong>"{{ search_term }}"</strong>{% endif %}
 							</p>
 						</div>
 					</div>
 					<div class="row">
 					{% for item in items %}
-                    {% if item.sale == Yes %}
-                    {{item.sale}}
+                    {% if item.sale %}
+                    
                     	<div class="row fluid">
 							<div id="item-img" class="col-12 col-md-4 col-lg-4">
 								<div class="card h-100 border-3">

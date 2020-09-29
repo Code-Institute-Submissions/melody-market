@@ -59,23 +59,38 @@ def all_items(request):
 
     return render(request, 'products/items.html', context)
 
-def item_condition(request, product_id):
+def item_condition(request):
 
     """ A view to show if the item is used """
 
-    condition = None
+    items = Product.objects.all()
+    condition = Condition.objects.all()
+    sort = None
+    direction = None
 
-    if 'condition' in request.GET:
-            conditions = request.GET['items']
-            items = items.filter(condition__name__in=conditions)
-            conditions = Condition.objects.filter(name__in=conditions)
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                items = items.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            items = items.order_by(sortkey)
+
+    current_sorting = f'{sort}_{direction}'
 
     context = {
-        'products': items,
-        'conditions': conditions,
+        'items': items,
+        'current_sorting': current_sorting,
     }
     
-    return render(request, 'products/second_hand.html')
+    return render(request, 'products/second_hand.html', context)
 
 def item_sale(request):
     
@@ -83,9 +98,29 @@ def item_sale(request):
 
     items = Product.objects.all()
     sale = Sale.objects.all()
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                items = items.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            items = items.order_by(sortkey)
+
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'items': items,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/sale.html', context)
