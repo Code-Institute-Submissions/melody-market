@@ -77,22 +77,18 @@ def item_condition(request, product_id):
     
     return render(request, 'products/second_hand.html')
 
-def item_sale(request, product_id):
+def item_sale(request):
     
     """ A view to show if the item is on sale """
 
-    if 'sale' in request.GET:
-            sales = request.GET['items']
-            items = items.filter(sale__name__in=sales)
-            sales = Sale.objects.filter(name__in=sales)
-    
-    return render(request, 'products/items.html')
+    items = Product.objects.all()
+    sale = Sale.objects.all()
 
     context = {
-        'products': items,
-        'sales': sales,
-        'sale_items': categories,
+        'items': items,
     }
+
+    return render(request, 'products/sale.html', context)
 
 def item_details(request, product_id):
 

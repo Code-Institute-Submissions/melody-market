@@ -18,7 +18,7 @@
      <p><h2>Music Ads</h2></p>
      <p>Are you selling or buying an instrument or a piece of equipment?</p> 
      <p>Maybe you are looking for a fellow musician for that cool new band of yours?</p>
-     <p>Number of ads {{ texts | length }}</p>
+     <p>Number of ads {{ objs | length }}</p>
     </div>
 </div>
 <form method="POST" action="{% url 'addMessage' %}">
@@ -38,7 +38,7 @@
 			{% for text in texts %}
                 {% for objs in text %}
                  <p>
-                    {% if objs.Advert == Advert %}
+                    {% if objs.advert == top %}
                         {{ objs.date_created }}
                         <br>
                         {{ objs.text }}
