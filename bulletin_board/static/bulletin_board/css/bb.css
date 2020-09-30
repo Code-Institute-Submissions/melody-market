@@ -35,11 +35,6 @@ fieldset {
     background-color: rgba(59, 24, 0, 0.493);
 }
 
-.adv_title {
-    background-image: url('{{ MEDIA_URL }}/board.jpg') no-repeat center center fixed !important;
-    background-size: cover;
-}
-
 #bb-btn {
     color: whitesmoke;
     background-color: rgba(59, 24, 0, 0.815);
@@ -66,7 +61,7 @@ fieldset {
     height: 800px;
     padding: 0;
     margin: 0;
-    background-image: url("/media/board.jpg") !important;
+    background-image: url("https://melody-market.s3-eu-west-1.amazonaws.com/media/board.jpg") !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important; 
