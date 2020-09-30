@@ -49,3 +49,15 @@ fieldset {
 #bb-btn:hover {
     background-color: rgba(59, 24, 0, 0.952);
 }
+
+.sign-btn {
+    padding: 5px;
+    border: 1px solid rgba(59, 24, 0, 0.37);
+    font-weight: bold;
+    color: rgb(83, 34, 2);
+}
+
+.sign-btn:hover {
+    color: whitesmoke;
+    background-color: rgb(121, 50, 3);
+}

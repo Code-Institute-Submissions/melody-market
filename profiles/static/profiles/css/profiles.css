@@ -1,0 +1,9 @@
+#btn-profile {
+    color: whitesmoke;
+    background-color: rgb(78, 25, 0);
+    border-radius: 7px;
+}
+
+#btn-profile:hover {
+    background-color: rgb(51, 16, 0);
+}

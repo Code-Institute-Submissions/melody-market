@@ -217,6 +217,16 @@ article a {
     color: rgb(56, 18, 0);
 }
 
+#btn-profile {
+    color: whitesmoke;
+    background-color: rgb(78, 25, 0);
+    border-radius: 7px;
+}
+
+#btn-profile:hover {
+    background-color: rgb(51, 16, 0);
+}
+
 /* ------- Shopping Cart -------- */
 
 #cart-btn-payments {
