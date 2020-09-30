@@ -61,3 +61,53 @@ fieldset {
     color: whitesmoke;
     background-color: rgb(121, 50, 3);
 }
+
+.jumbotron {
+    height: 800px;
+    padding: 0;
+    margin: 0;
+    background-image: url("/media/board.jpg") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important; 
+    background-color: transparent !important;
+    position: relative !important;
+}
+
+#bb-title {
+    color: rgb(83, 34, 2);
+    padding: 10px;
+}
+
+.adv-titles {
+    color: rgb(83, 34, 2);
+}
+
+#adv-card {
+   background-color: rgba(255, 247, 211, 0.911);
+
+}
+
+#bb-panel::-webkit-scrollbar {
+  display: none;
+}
+
+#bb-panel {
+    overflow-y: scroll;
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+   height: 500px;
+}
+
+@media (max-width: 700px){
+
+.jumbotron {
+    height: 800px;
+    padding: 0;
+    margin: 0;
+    background-image: none !important;
+    background-color: transparent !important;
+    position: relative !important;
+}
+
+}

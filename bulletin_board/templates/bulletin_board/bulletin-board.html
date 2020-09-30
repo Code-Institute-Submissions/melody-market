@@ -16,24 +16,30 @@
 <div class="container">
 {% if user.is_authenticated %}
 
-<div class="row mt-5 pt-5">
-    <div class="col">
-     <p>Are you selling or buying an instrument or a piece of equipment?</p> 
-     <p>Maybe you are looking for a fellow musician for that cool new band of yours?</p>
+<div class="jumbotron">
+    <div class="row mt-5 pt-5">
+        <div class="col-2"></div>
+        <div class="col-8 d-none d-md-block">
+            <div class="mt-2 mb-4" id="bb-title">
+                <h4><strong>Leave a short ad if in search for an instrument or a musician!</strong></h4>
+            </div>
+        </div>
+        <div class="col-2"></div>
     </div>
-</div>
-<form method="POST" action="{% url 'addMessage' %}">
+
+<form class="mb-3" method="POST" action="{% url 'addMessage' %}">
 			{% csrf_token %}
 	<button id="bb-btn" class="btn" style="width:fit-content; padding: 4px; margin:10px;">Add a message</button>
 </form>
 
-<div class="row">
+<div id="bb-panel" class="row no-gutters">
+<div class="col-2"></div>
 	{% for top in topic %}
-	<div class="col-12 col-md-6 mb-4">
-		<div class="card box container">
+	<div class="col-12 col-md-4 mb-4">
+		<div id="adv-card" class="card box container">
 			<br>
 			<h5 class="card-title">
-				<h3 class=""><strong>{{ top.title }}</strong></h3>
+				<h3 class="adv-titles"><strong>{{ top.title }}</strong></h3>
 			</h5>
 			<div class="card-body container">
 			<hr>
@@ -44,7 +50,8 @@
                         <small>{{ objs.date_created }}</small>
                         <br>
                         <p id="adv_text">{{ objs.text }}</p>
-                        {{ objs.phnumber }}
+                        <p>{{ objs.phnumber }}</p>
+                        <hr>
                     {% endif %}
                 </p>
                 {% endfor %}
@@ -53,6 +60,7 @@
 		</div>
 	</div>
     {% endfor %}
+    <div class="col-3"></div>
 </div>
 
 {% else %}
@@ -70,5 +78,6 @@
 	</div>
 </div>
 {% endif %}
+</div>
 </div>
 {% endblock %}
