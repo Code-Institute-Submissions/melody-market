@@ -84,11 +84,15 @@ a:hover {
 }
 
 #dropdown-user a:hover {
-    color: rgb(56, 18, 0) !important;
+    background-color: rgba(53, 21, 0, 0.856) !important;
 }
 
 #dropdown-user a:active {
     color: whitesmoke !important;
+    background-color: rgba(53, 21, 0, 0.856) !important;
+}
+
+#dropdown-user a:visited {
     background-color: rgba(53, 21, 0, 0.856) !important;
 }
 
@@ -184,12 +188,12 @@ article a {
 }
 
 #addbutt {
-    background-color: rgb(22, 187, 22);
+    background-color: rgb(20, 141, 20);
     border-radius: 10px;
 }
 
 #addbutt:hover {
-    background-color: rgb(38, 138, 38);
+    background-color: rgb(25, 88, 25);
 }
 
 #addbutt2 {
@@ -206,6 +210,11 @@ article a {
 #update-qty-input {
     width: 70%;
     padding-left: 30%;
+}
+
+#cont-mail {
+    font-weight: bold;
+    color: rgb(56, 18, 0);
 }
 
 /* ------- Shopping Cart -------- */
@@ -313,27 +322,40 @@ body {
     font-size: 12px;
 }
 
+#home-slogan {
+    font-size: 18px;
+}
+
 .navbar {
     font-size: 8px;
     padding: 0 !important;
+    background-color: rgba(53, 21, 0, 0.856) !important;
+}
+
+.navbar a {
+    color: whitesmoke !important;
+}
+
+.navbar-toggler {
+    background-color: rgba(245, 245, 245, 0.377) !important;
+    outline: none !important;
 }
 
 .nav-link {
     padding: 5px 0 !important;
 }
 
+#dropdown-user a {
+    font-size: 10px;
+}
+
 #feature-title {
     font-size: 20px;
 }
 
-#feature1 {
+#feature2 {
     height: 180px;
     width: 180px;
-}
-
-#feature2,
-#feature3 {
-    display: none;
 }
 
 .none-visible {
@@ -349,6 +371,14 @@ body {
 #item-img {
     padding: 0 !important;
 }
+
+#product-description-text {
+    display: none;
+}
+
+.header-container {
+        padding-top: 40px;
+    }
 
 }
 
@@ -377,10 +407,23 @@ h3 {
 .navbar {
     font-size: 9px;
     padding: 0 !important;
+    background-color: rgba(53, 21, 0, 0.856) !important;
+}
+
+.navbar a {
+    color: whitesmoke !important;
+}
+
+.navbar-toggler {
+    background-color: rgba(245, 245, 245, 0.377) !important;
+    outline: none !important;
+}
+
+#dropdown-user a {
+    font-size: 10px;
 }
 
 #home-feature-container {
-    margin-top: 60px;
     width: auto;
 }
 
@@ -388,17 +431,18 @@ h3 {
     font-size: 20px;
 }
 
-#feature2,
-#feature3 {
-    display: none;
+#feature2 {
+    height: 240px;
+    width: 240px;
 }
+
 
 .none-visible {
     display: none;
 }
 
 #sort-selector{
-    margin-top: 40px;
+    margin-top: 5px;
     width: 100px;
 }
 
@@ -407,8 +451,12 @@ h3 {
     padding: 0 !important;
 }
 
+#product-description-text {
+    display: none;
+}
+
 .header-container {
-        padding-top: 150px;
+        padding-top: 40px;
     }
 
 }

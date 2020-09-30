@@ -3,8 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
-from .models import Product, Category, Condition, Sale
-
+from .models import Product, Category
 from .forms import ProductForm
 
 # Create your views here.
@@ -64,7 +63,7 @@ def item_condition(request):
     """ A view to show if the item is used """
 
     items = Product.objects.all()
-    condition = Condition.objects.all()
+    is_used = Product.objects.filter(is_used=True)
     sort = None
     direction = None
 
@@ -86,6 +85,7 @@ def item_condition(request):
     current_sorting = f'{sort}_{direction}'
 
     context = {
+        'is_used': is_used,
         'items': items,
         'current_sorting': current_sorting,
     }
@@ -97,7 +97,7 @@ def item_sale(request):
     """ A view to show if the item is on sale """
 
     items = Product.objects.all()
-    sale = Sale.objects.all()
+    on_sale = Product.objects.filter(on_sale=True)
     sort = None
     direction = None
 
@@ -119,6 +119,7 @@ def item_sale(request):
     current_sorting = f'{sort}_{direction}'
 
     context = {
+        'on_sale': on_sale,
         'items': items,
         'current_sorting': current_sorting,
     }
@@ -137,6 +138,7 @@ def item_details(request, product_id):
 
     return render(request, 'products/item_details.html', context)
 
+@login_required
 def add_item(request):
     
     """ Allows users adding items to the store """

@@ -1,37 +1,39 @@
 {% extends "base.html" %} {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'bulletin_board/css/bb.css' %}">
+{% endblock %}
 
 {% block page_header %}
 	<div class="container empty-header">
         <div class="row">
-            <div class="col"></div>
+            <div class="col mt-5 pt-5 d-none d-md-block"></div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-
+<div class="container">
 {% if user.is_authenticated %}
 
 <div class="row mt-5 pt-5">
-    <div class="col mt-5 pt-5">
-     <p><h2>Music Ads</h2></p>
+    <div class="col">
      <p>Are you selling or buying an instrument or a piece of equipment?</p> 
      <p>Maybe you are looking for a fellow musician for that cool new band of yours?</p>
-     <p>Number of ads {{ objs | length }}</p>
     </div>
 </div>
 <form method="POST" action="{% url 'addMessage' %}">
 			{% csrf_token %}
-	<button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">Add a message</button>
+	<button id="bb-btn" class="btn" style="width:fit-content; padding: 4px; margin:10px;">Add a message</button>
 </form>
+
 <div class="row">
 	{% for top in topic %}
-	<div class="col-6">
+	<div class="col-12 col-md-6 mb-4">
 		<div class="card box container">
 			<br>
 			<h5 class="card-title">
-				<h3>{{ top.title }}</h3>
+				<h3 class=""><strong>{{ top.title }}</strong></h3>
 			</h5>
 			<div class="card-body container">
 			<hr>
@@ -39,9 +41,9 @@
                 {% for objs in text %}
                  <p>
                     {% if objs.advert == top %}
-                        {{ objs.date_created }}
+                        <small>{{ objs.date_created }}</small>
                         <br>
-                        {{ objs.text }}
+                        <p id="adv_text">{{ objs.text }}</p>
                         {{ objs.phnumber }}
                     {% endif %}
                 </p>
@@ -68,5 +70,5 @@
 	</div>
 </div>
 {% endif %}
-
+</div>
 {% endblock %}

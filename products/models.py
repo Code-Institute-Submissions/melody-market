@@ -14,26 +14,10 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
-
-class Condition(models.Model):
-
-    condition = models.CharField(max_length=254)
-
-    def __str__(self):
-        return self.condition
-
-class Sale(models.Model):
-
-    sale = models.CharField(max_length=254)
-
-    def __str__(self):
-        return self.sale
-
-
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    condition = models.ForeignKey('Condition', null=True, blank=True, on_delete=models.SET_NULL)
-    sale = models.ForeignKey('Sale', null=True, blank=True, on_delete=models.SET_NULL)
+    is_used = models.BooleanField(default=False)
+    on_sale = models.BooleanField(default=False)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()

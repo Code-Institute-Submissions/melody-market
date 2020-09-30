@@ -75,3 +75,11 @@ select option[value=""] {
 .payment-details small {
     color: whitesmoke !important;
 }
+
+@media (max-width: 374px){
+
+#pymnt-mobil-head {
+    margin-top: 45px !important;
+}
+
+}

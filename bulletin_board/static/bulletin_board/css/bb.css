@@ -28,3 +28,24 @@
 fieldset {
     border: 1px solid rgba(59, 24, 0, 0.493) !important;
 }
+
+
+#adv_text {
+    color: whitesmoke;
+    background-color: rgba(59, 24, 0, 0.493);
+}
+
+.adv_title {
+    background-image: url('{{ MEDIA_URL }}/board.jpg') no-repeat center center fixed !important;
+    background-size: cover;
+}
+
+#bb-btn {
+    color: whitesmoke;
+    background-color: rgba(59, 24, 0, 0.815);
+    padding: 10px !important;
+}
+
+#bb-btn:hover {
+    background-color: rgba(59, 24, 0, 0.952);
+}
