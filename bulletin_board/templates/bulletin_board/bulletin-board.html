@@ -20,8 +20,8 @@
     <div class="row mt-5 pt-5">
         <div class="col-2"></div>
         <div class="col-8 d-none d-md-block">
-            <div class="mt-2 mb-4" id="bb-title">
-                <h4><strong>Leave a short ad if in search for an instrument or a musician!</strong></h4>
+            <div class="mt-2 mb-1" id="bb-title">
+                <h4><strong>Leave a short note if in search for an instrument or a musician!</strong></h4>
             </div>
         </div>
         <div class="col-2"></div>
@@ -29,7 +29,7 @@
 
 <form class="mb-3" method="POST" action="{% url 'addMessage' %}">
 			{% csrf_token %}
-	<button id="bb-btn" class="btn" style="width:fit-content; padding: 4px; margin:10px;">Add a message</button>
+	<button id="bb-btn" class="btn mb-4" style="width:fit-content; padding: 4px; margin:10px;">Add a message</button>
 </form>
 
 <div id="bb-panel" class="row no-gutters">
@@ -73,7 +73,7 @@
 	<div class="col mt-5">
 		<label class="form-check-label" for="id-save-info">
     <a class="sign-btn" href="{% url 'account_signup' %}">Create an account</a> or 
-    <a class="sign-btn" href="{% url 'account_login' %}">login</a> to access the Bulletin Board
+    <a class="sign-btn" href="{% url 'account_login' %}">Login</a> to access the Bulletin Board
 </label>
 	</div>
 </div>

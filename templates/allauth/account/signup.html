@@ -1,4 +1,5 @@
-{% extends "account/base.html" %}
+{% extends "account/base.html" %} {% load static %}
+
 
 {% load i18n %}
 
@@ -6,12 +7,12 @@
 
 {% block content %}
 <div class="row mt-5 pt-5">
-    <div class="col mt-5 pt-5">
+    <div class="col mt-5 pt-5 d-none d-md-block">
     </div>
 </div>
 <h2 class="">{% trans "Sign Up" %}</h2>
 
-<p class="mt-4">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<p class="mt-4">{% blocktrans %}Already have an account? Then please <a class="links" href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
 <div class="row mt-4">
 <div class="col offset-1 d-none d-md-block">
@@ -23,7 +24,7 @@
 		{% if redirect_field_value %}
 		<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-		<button type="submit">{% trans "Sign Up" %} &raquo;</button>
+		<button class="buttons" type="submit">{% trans "Sign Up" %}</button>
 	</form>
 </div>
 <div class="col offset-1 d-none d-md-block"></div>

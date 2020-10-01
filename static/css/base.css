@@ -92,7 +92,7 @@ a:hover {
     background-color: rgba(53, 21, 0, 0.856) !important;
 }
 
-#dropdown-user a:visited {
+#dropdown-user a:valid {
     background-color: rgba(53, 21, 0, 0.856) !important;
 }
 
@@ -183,17 +183,13 @@ article a {
     font-size: 15px;
 }
 
-#add-to-cart-button {
-    width: 50%;
-}
-
 #addbutt {
-    background-color: rgb(20, 141, 20);
+    background-color: rgb(19, 100, 19);
     border-radius: 10px;
 }
 
 #addbutt:hover {
-    background-color: rgb(25, 88, 25);
+    background-color: rgb(18, 61, 18);
 }
 
 #addbutt2 {
@@ -319,6 +315,23 @@ article a {
     top: 80px;
     right: 15px;
     z-index: 99999999999;
+}
+
+/* --------- Allauth ------------ */
+
+.links {
+    color: rgb(56, 18, 0);
+    font-weight: bold;
+}
+
+.buttons {
+    color: whitesmoke;
+    background-color: rgb(78, 25, 0);
+    border-radius: 7px;
+}
+
+.buttons:hover {
+    background-color: rgb(51, 17, 1);
 }
 
 /* ------------ Media Queries ----------- */

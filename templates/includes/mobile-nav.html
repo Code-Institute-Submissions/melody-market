@@ -24,7 +24,11 @@
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="far fa-user"></i></div>
+            {% if request.user.is_authenticated %}
+            <p class="my-0">{{ user }}</p>
+            {% else %}
             <p class="my-0">My Account</p>
+            {% endif %}
         </div>
     </a>
     <div id="dropdown-user" class="dropdown-menu border-0" aria-labelledby="user-options">
