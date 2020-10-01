@@ -75,23 +75,31 @@ Regular users, regardless of registration don't have that option
 Plan for forseeable future is that users can upload their audio files and sell them which will expand the site even further on the market.
 
 # Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
+----------------------------------------------------
 ## Frontend
 
 HTML - for main structure of the website
+
 CSS - for the styling and general looks of the website
+
 JavaScript - for different functionalities of the specific parts of the website such as showing random images of the items on sale
+
 jQuery - used in combination with JavaScript to make DOM manipulation easier
+
 Bootstrap - for a main layout of the website and for quick editing the style of the site.
+
 Font Awesome - for navbar icons
 
 ## Backend
 
 Python
+
 Django framework
+
 AWS S3 - for storing media files such as images and static files which contain CSS and JavaScript
+
 Stripe - for secure payments in the checkout process after purchasing a product
+
 Heroku - for the deployment of the web site and public access
 
 # Testing
@@ -110,6 +118,9 @@ Try to input all the required details and click on login button and verify that 
 * On a registration page
 *Known bug*
 Try to input all the required details and click on the register button and verify that an error message appears. *(User is registered and that can be checked on the admin page. This is possibly due to restrictions from Gmail as when run locally verification email appears in the console.)*
+
+- Due to this issue, testing user name and password is provided for the assessors. Username: Tester | Password: Testing12345
+*(This is a regular user level of access and there is no possibility of modifying the content other than on Bulleting Board page)*
 
 ![alt text](https://melody-market.s3-eu-west-1.amazonaws.com/media/image5.JPG)
 
